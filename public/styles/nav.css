@@ -16,7 +16,7 @@ nav {
   justify-content: space-between;
 }
 
-span {
+.left-nav span {
   font-family: 'Bungee', sans-serif;
 }
 
