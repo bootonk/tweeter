@@ -7,6 +7,7 @@ Full width of the viewport
 
 nav {
   height: 120px;
+  width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
   padding-right: 1.5em;
@@ -14,6 +15,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
 }
 
 .left-nav span {

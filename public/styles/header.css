@@ -1,0 +1,18 @@
+header {
+  height: 520px;
+  padding-top: 120px;
+  background-color: rgb(184 106 2);
+  background-image: url("../images/back-pattern.png");
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+header h2 {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-size: 1.25em;
+}
