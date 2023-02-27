@@ -30,3 +30,14 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ /* 90% of the width of its parent element
+center aligned to the body
+the same background colour as the <body> element */
+
+main {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
