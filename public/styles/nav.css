@@ -32,3 +32,7 @@ nav {
   font-size: 20px;
   margin: 10px;
 }
+
+.right-nav i {
+  color: rgb(191 61 61);
+}
