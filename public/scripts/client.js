@@ -6,7 +6,7 @@
 const renderTweets = function(tweetArr) {
   for (const tweet of tweetArr) {
     const buildNewTweet = createTweetElement(tweet);
-    $('#tweets-container').append(buildNewTweet);
+    $('#tweets-container').prepend(buildNewTweet);
   }
 };
 
@@ -58,6 +58,8 @@ $(document).ready(function() {
         
         $( "#tweet-text" ).val("");
         $( ".counter" ).val(140);
+
+        loadTweets();
       }
   
     });
@@ -67,7 +69,10 @@ $(document).ready(function() {
     $.ajax({
       method: "GET",
       url: "/tweets",
-      success: (responseData) => { renderTweets(responseData) },
+      success: (responseData) => {
+        $( "#tweets-container" ).empty(); 
+        renderTweets(responseData) 
+      },
       error: (err) => { console.log("ah ah ahhhh", err.message) }
     })
   };
