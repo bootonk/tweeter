@@ -6,7 +6,7 @@
 const renderTweets = function(tweetArr) {
   for (const tweet of tweetArr) {
     const buildNewTweet = createTweetElement(tweet);
-    const appendNewTweet = $('#tweets-container').append(buildNewTweet);
+    $('#tweets-container').append(buildNewTweet);
   }
 };
 
@@ -28,7 +28,7 @@ const createTweetElement = function(tweetObj) {
   
   const newFooter = `
         <footer>
-          <p>${tweetObj.created_at}</p>
+          <p>${timeago.format(tweetObj.created_at)}</p>
           <div class="footer-icons">
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
