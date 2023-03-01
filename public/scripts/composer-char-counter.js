@@ -4,6 +4,12 @@ $(document).ready(function() {
     const keyPressed = $( this ).val().length;
     keyCount -= keyPressed;
     
+    if (keyCount === 140) {
+      $( ".counter" ).addClass("under-limit");
+    } else {
+      $( ".counter" ).removeClass("under-limit");
+    }
+
     if (keyCount < 0) {
       $( ".counter" ).addClass("over-limit");
     } else {

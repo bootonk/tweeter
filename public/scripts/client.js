@@ -45,14 +45,22 @@ const createTweetElement = function(tweetObj) {
 
 $(document).ready(function() {
   // override standard form submission with ajax version
-  $( "#post-tweet" ).submit(function( event ) {
-    event.preventDefault();
+    $( "#post-tweet" ).submit(function( event ) {
+      event.preventDefault();
 
-    const serializedURL = $( this ).serialize();
-    $.post( "/tweets", serializedURL);
-    
-    $( "#tweet-text" ).val("");
-  });
+      if ($( "form output" ).hasClass( "under-limit" )) {
+        alert("cannot post tweet, too low")
+      } else if ($( "form output" ).hasClass( "over-limit" )) {
+        alert("cannot post tweet, too high")
+      } else {
+        const serializedURL = $( this ).serialize();
+        $.post( "/tweets", serializedURL);
+        
+        $( "#tweet-text" ).val("");
+        $( ".counter" ).val(140);
+      }
+  
+    });
 
   // load tweets from external server
   const loadTweets = function() {
