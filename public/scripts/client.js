@@ -7,8 +7,7 @@ const data = [
   {
     "user": {
       "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
+      "avatars": "https://i.imgur.com/73hZDYK.png",
       "handle": "@SirIsaac"
     },
     "content": {
@@ -20,7 +19,8 @@ const data = [
     "user": {
       "name": "Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd" 
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
