@@ -49,7 +49,7 @@ const createTweetElement = function(tweetObj) {
           </div>
         </header>`;
 
-  const newTweet = $("<p>").addClass("content").text(tweetObj.content.text);
+  const newBody = $("<p>").addClass("content").text(tweetObj.content.text);
   
   const newFooter = `
         <footer>
@@ -62,12 +62,23 @@ const createTweetElement = function(tweetObj) {
         </footer>`
 
   newArticle.append(newHeader);
-  newArticle.append(newTweet);
+  newArticle.append(newBody);
   newArticle.append(newFooter);
 
   return newArticle;
 };
 
 $(document).ready(function() {
+  // process tweets array & format each into HTML element to append
   renderTweets(data);
+
+  // override standard form submission with ajax version
+  $( "#postTweet" ).submit(function( event ) {
+    event.preventDefault();
+
+    const serializedURL = $( this ).serialize();
+    $.post( "/tweets", serializedURL);
+    
+    $( "#tweet-text" ).val("");
+  });
 });
