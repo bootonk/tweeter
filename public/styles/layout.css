@@ -28,5 +28,66 @@ body {
 main {
   width: 90%;
   margin: auto;
-  display: flex;
 }
+
+article.tweet {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 3px #545149;
+  padding: 20px;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px rgb(198 215 229);
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet .left-header {
+  display: flex;
+  align-items: center;
+}
+
+.left-header img {
+  width: 40px;
+  height: 40px;
+}
+
+.left-header p {
+  margin: 15px;
+  font-size: 18px;;
+}
+
+.right-header p {
+  font-size: 18px;
+  font-weight: bold;
+  color:rgb(198 215 229);
+}
+
+article.tweet p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid #545149;
+}
+
+article.tweet footer p, article.tweet footer i {
+  font-size: 12px;
+  padding-left: 5px;
+  padding-right:5px;
+}
+
+article.tweet footer i:hover {
+  color: #4056A1;
+}
+
