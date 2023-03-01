@@ -36,13 +36,12 @@ form div {
 }
 
 form button {
-  /* font-family: 'Bungee', sans-serif; */
   font-size: 18px;;
   background-color: #4056A1;
   color: #FFFFFF;
   border-width: 0px;
 }
 
-form .counter {
-  /* font-family: 'Bungee', sans-serif; */
+.over-limit {
+  color: rgb(191 61 61);
 }
