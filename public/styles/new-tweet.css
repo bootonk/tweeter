@@ -33,15 +33,15 @@ form div {
 }
 
 form button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #bc8e0e;
+  color: #f4f1ec;
   border-width: 0px;
 }
 
 .error {
   display: flex;
   align-items: center;
-  border-bottom: 3px dotted rgb(191 61 61);
+  border-bottom: 3px dotted #822a2a;
   margin-bottom: 40px;
 }
 
@@ -51,5 +51,5 @@ form button {
 }
 
 .error i, .over-limit {
-  color: rgb(191 61 61);
+  color: #822a2a;
 }

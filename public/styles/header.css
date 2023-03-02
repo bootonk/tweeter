@@ -1,13 +1,34 @@
 #main-header  {
   height: 520px;
   padding-top: 120px;
-  background-color: rgb(184 106 2);
-  background-image: url("../images/back-pattern.png");
+  background-color: #e4d1e6;
+  /* background-image: url("../images/bird-background.png"); */
+  /* background-size: cover; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+#main-header::before {    
+  content: "";
+  height: 520px;
+  padding-top: 120px;
+  background-image: url("../images/bird-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.30;
+}
+
+#main-header img {
+  width: 250px;
+  z-index: 1;
 }
 
 #main-header h2 {

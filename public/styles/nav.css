@@ -1,25 +1,20 @@
-/* 120 pixels in height
-Full width of the viewport
-#4056A1 as its default background colour
-#FFFFFF as its default font colour
-<span> within the <nav> uses Bungee as its default font-family
-1.5ems of space on the right and left between the content and the edges */
-
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: #bc8e0e;
+  color: #f4f1ec;
   padding-right: 1.5em;
   padding-left: 1.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  z-index: 1;
 }
 
 .left-nav span {
   font-family: 'Bungee', sans-serif;
+  font-size: 24px;
 }
 
 .right-nav {
@@ -34,7 +29,7 @@ nav {
 }
 
 .right-nav i {
-  color: rgb(191 61 61);
+  color: #822a2a;
   position: relative;
   animation: bounce 1.5s ease infinite alternate-reverse;
 }
