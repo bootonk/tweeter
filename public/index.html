@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- External Font -->
+    <!-- External Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
@@ -18,23 +18,25 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/posted-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-form.js" defer></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js" defer></script>
-    <script type="text/javascript" src="/scripts/client.js" defer></script>
+    <script type="text/javascript" src="/scripts/client.js" defer></script> 
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
+    <!-- Fixed navigation bar -->
     <nav>
       <div class="left-nav">
         <span>tweeter</span>
       </div>
-      <div class="right-nav">
+      <div class="right-nav toggle-form">
         <p><strong>Write</strong> a new tweet</p>
         <i class="fa-solid fa-angles-down"></i>
       </div>
@@ -49,9 +51,9 @@
           <h2>Your Name</h2>
       </div>
     </header>
-    <!-- Page-specific (main) content here -->
+    <!-- Main content -->
     <main class="container">
-    <!-- New tweet section -->
+    <!-- New tweet form -->
       <section class="new-tweet">
         <div class="error">
           <i class="fa-solid fa-bomb"></i>
@@ -59,7 +61,6 @@
         </div>
         </div>
         <form id="post-tweet">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?" rows="1"></textarea>
           <div>
             <button type="submit">Tweet</button>
@@ -67,7 +68,7 @@
           </div>
         </form>
       </section>
-    <!-- Tweets container section -->
+    <!-- Tweets container -->
       <section id="tweets-container"></section>
     </main>
   </body>

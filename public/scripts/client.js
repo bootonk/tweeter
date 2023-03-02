@@ -4,17 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  // default states
-  $( ".new-tweet" ).hide();
-  $( ".error " ).hide();
-
-  // toggle tweet form with write tweet nav text
-  $( ".toggle-form" ).click(function() {
-    $( ".new-tweet" ).toggle( "slow" )
-    $( "#post-tweet textarea").focus();
-  })
-
-
+  // build HTML for tweet
   const createTweetElement = function(tweetObj) {
     const escape = function (str) {
       let div = document.createElement("div");
@@ -47,6 +37,7 @@ $(document).ready(function() {
     return tweetElement;
   };
 
+  // process each tweet in the database and create HTML for each
   const renderTweets = function(tweetArr) {
     $( "#tweets-container" ).empty();
     for (const tweet of tweetArr) {
@@ -67,10 +58,16 @@ $(document).ready(function() {
   });
   };
 
-  // override standard form submission with ajax version
+  const resetForm = function() {
+    $( "#tweet-text" ).val("");
+    $( ".counter" ).val(140).addClass( "under-limit ");
+  };
+
+  // ajax form submission to post new tweet and add to tweet list
     $( "#post-tweet" ).submit(function( event ) {
       event.preventDefault();
 
+      // error handling to meet post requirements
       if ($( "form output" ).hasClass( "under-limit" )) {
         $( ".error p").text("Type a letter, any letter");
         $( ".error" ).slideDown( "slow" );
@@ -82,12 +79,11 @@ $(document).ready(function() {
       } else {
         $( ".error" ).slideUp( "slow" );
 
+        // happy path for posted tweet
         const serializedURL = $( this ).serialize();
         $.post( "/tweets", serializedURL)
         .done(function( data ) {
-          $( "#tweet-text" ).val("");
-          $( ".counter" ).val(140).addClass( "under-limit ");
-        
+          resetForm()
           loadTweets();
         }).fail(function( jqXHR, textStatus, errorThrown ) {
           console.log(jqXHR);

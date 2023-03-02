@@ -6,10 +6,6 @@
   padding-bottom: 20px;
 }
 
-.new-tweet h2, form label {
-  display: none;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -18,7 +14,6 @@ form {
 
 form textarea {
   font-weight: bold;
-  font-size: 18px;
   resize: none;
   border: none;
   padding-bottom: 20px;
@@ -38,7 +33,6 @@ form div {
 }
 
 form button {
-  font-size: 18px;;
   background-color: #4056A1;
   color: #FFFFFF;
   border-width: 0px;
@@ -52,7 +46,6 @@ form button {
 }
 
 .error p {
-  font-size: 18px;
   font-weight: bold;
   margin: 10px;
 }
