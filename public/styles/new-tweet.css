@@ -1,5 +1,7 @@
 .new-tweet {
   width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -19,7 +21,7 @@ form textarea {
   font-size: 18px;
   resize: none;
   border: none;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   border-bottom: 3px solid #545149;
   background-color: #f4f1ec;
 }
@@ -31,7 +33,7 @@ form textarea:focus {
 form div {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 20px;
   font-family: 'Bungee', sans-serif;
 }
 
@@ -42,6 +44,19 @@ form button {
   border-width: 0px;
 }
 
-.over-limit {
+.error {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px dotted rgb(191 61 61);
+  margin-bottom: 40px;
+}
+
+.error p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.error i, .over-limit {
   color: rgb(191 61 61);
 }

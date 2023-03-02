@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  $( ".error " ).hide();
+
   const createTweetElement = function(tweetObj) {
     const escape = function (str) {
       let div = document.createElement("div");
@@ -61,15 +63,21 @@ $(document).ready(function() {
       event.preventDefault();
 
       if ($( "form output" ).hasClass( "under-limit" )) {
-        alert("cannot post tweet, too low")
+        $( ".error p").text("Type a letter, any letter");
+        $( ".error" ).slideDown( "slow" );
+
       } else if ($( "form output" ).hasClass( "over-limit" )) {
-        alert("cannot post tweet, too high")
+        $( ".error p").text("Cut down the word count");
+        $( ".error" ).slideDown( "slow" );
+
       } else {
+        $( ".error" ).slideUp( "slow" );
+
         const serializedURL = $( this ).serialize();
         $.post( "/tweets", serializedURL)
         .done(function( data ) {
           $( "#tweet-text" ).val("");
-          $( ".counter" ).val(140);
+          $( ".counter" ).val(140).addClass( "under-limit ");
         
           loadTweets();
         }).fail(function( jqXHR, textStatus, errorThrown ) {

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $( "#tweet-text" ).keyup(function(event) {
+  $( "#tweet-text" ).keyup(function() {
     let keyCount = 140;
     const keyPressed = $( this ).val().length;
     keyCount -= keyPressed;
@@ -17,6 +17,6 @@ $(document).ready(function() {
     }
 
     const counterOutput = $( this ).parent().find(".counter");
-    const updateCounter = counterOutput.text(keyCount);
+    counterOutput.text(keyCount);
   });
 });
