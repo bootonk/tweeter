@@ -13,7 +13,7 @@ $(document).ready(function() {
     } else {
       $( ".new-tweet" ).toggle( "slow" );
       $( "#post-tweet textarea").focus();
-      $( ".right-nav p" ).text( "Hide tweet form" );
+      $( ".right-nav p" ).text( "Hide tweet poster" );
       $(this).find($(".fa-solid")).removeClass('fa-angles-down').addClass('fa-angles-up');
     }
   })
@@ -32,6 +32,8 @@ $(document).ready(function() {
     } else {
       $( ".new-tweet" ).toggle( "slow" );
       $( "#post-tweet textarea").focus();
+      $( ".right-nav p" ).text( "Hide tweet poster" );
+      $(this).find($(".fa-solid")).removeClass('fa-angles-down').addClass('fa-angles-up');
     }
   })
 });
