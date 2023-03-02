@@ -35,4 +35,16 @@ nav {
 
 .right-nav i {
   color: rgb(191 61 61);
+  position: relative;
+  animation: bounce 1.5s ease infinite alternate-reverse;
 }
+
+@keyframes bounce {
+  0% {
+    top: -5px;
+  }
+  100% {
+    top: 5px;
+  }
+}
+
