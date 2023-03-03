@@ -15,12 +15,12 @@ $(document).ready(function() {
     $( ".right-nav i" ).removeClass( "fa-angles-down" ).addClass( "fa-angles-up" );
     $( ".right-nav p" ).text( "Hide tweet builder" );
     $( "#post-tweet textarea" ).focus();
-  }
+  };
 
   /** toggle visibility state of form */
   const toggleFormVisiblity = function() {
     $( ".new-tweet" ).toggle( "slow" );
-  }
+  };
 
   // toggle tweet form with nav click
   $( ".toggle-form" ).click(function() {
@@ -31,7 +31,7 @@ $(document).ready(function() {
       toggleFormVisiblity();
       openTheForm();
     }
-  })
+  });
 
   // create scroll trigger for scroll container
   $(window).scroll(function() {
@@ -50,5 +50,5 @@ $(document).ready(function() {
       toggleFormVisiblity();
       openTheForm();
     }
-  })
+  });
 });

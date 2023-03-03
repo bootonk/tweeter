@@ -1,7 +1,7 @@
 $(document).ready(function() {
   /**
    * build HTML for a single tweet
-   * @param {*} tweetObj 
+   * @param {*} tweetObj
    * @returns html element to be used in renderTweets()
    */
   const createTweetElement = function(tweetObj) {
@@ -68,7 +68,7 @@ $(document).ready(function() {
   /** helper function to display error message for 2 seconds */
   const showError = function() {
     $( ".error" ).slideDown( "slow" ).delay(2000).slideUp( "slow" );
-  }
+  };
 
   // ajax form submission to post new tweet and add to tweet list
     $( "#post-tweet" ).submit(function( event ) {
@@ -94,7 +94,7 @@ $(document).ready(function() {
           resetForm();
           $( ".error p").text("Server error, please contact support");
           showError();
-        });  
+        });
       }
     });
 
