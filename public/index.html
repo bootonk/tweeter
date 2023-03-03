@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -31,7 +32,7 @@
   </head>
 
   <body>
-    <!-- Fixed navigation bar -->
+    <!-- Fixed Top Navigation Bar -->
     <nav>
       <div class="left-nav">
         <span>tweeter</span>
@@ -41,7 +42,7 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <!-- Header with hardcoded user -->
+    <!-- Signed-in User Header -->
     <header id="main-header">
       <div>
           <img src="/images/profile.png"> 
@@ -50,7 +51,7 @@
     </header>
     <!-- Main content -->
     <main class="container">
-    <!-- New tweet form -->
+      <!-- Tweet Submission Form -->
       <section class="new-tweet">
         <div class="error">
           <i class="fa-solid fa-bomb"></i>
@@ -65,7 +66,7 @@
           </div>
         </form>
       </section>
-    <!-- Tweets container -->
+      <!-- Collection of Posted Tweet Elements -->
       <section id="tweets-container"></section>
       <div class="scroll-container">
         <a href="#top"><i class="fa-solid fa-angles-up"></i></a>

@@ -1,9 +1,9 @@
+/* Signed-in User Header */
+/* Global Styling */
 #main-header  {
   height: 520px;
   padding-top: 120px;
   background-color: #e4d1e6;
-  /* background-image: url("../images/bird-background.png"); */
-  /* background-size: cover; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -18,22 +18,47 @@
   background-image: url("../images/bird-background.png");
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0.30;
   position: absolute;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.30;
 }
 
 #main-header img {
   width: 250px;
-  z-index: 1;
 }
 
 #main-header h2 {
+  font-size: 1.25em;
+  margin: 10px;
   display: flex;
   justify-content: center;
-  margin: 10px;
-  font-size: 1.25em;
 }
+
+/* Desktop Styling */
+@media screen and (min-width: 1024px) {
+  #main-header{
+    width: 40%;
+    height: 400px;
+    padding-top: 10px;
+    margin-top: 10em;
+    margin-left: 50px;
+    display: flex;
+  }
+
+  #main-header::before {
+    width: 30%;
+    height: 400px;
+    margin-top: 10em;
+    margin-left: 50px;
+    display: inline-block;
+  }
+
+  #main-header div {
+    padding-top: 20px;
+    align-items: center;
+  }
+}
+  

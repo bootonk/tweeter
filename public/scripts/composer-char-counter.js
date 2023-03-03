@@ -4,6 +4,7 @@ $(document).ready(function() {
     const keyPressed = $( this ).val().length;
     keyCount -= keyPressed;
     
+    // add/remove class to flag invalid submission
     if (keyCount === 140) {
       $( ".counter" ).addClass("under-limit");
     } else {
@@ -16,6 +17,7 @@ $(document).ready(function() {
       $( ".counter" ).removeClass("over-limit");
     }
 
+    // update form counter
     const counterOutput = $( this ).parent().find(".counter");
     counterOutput.text(keyCount);
   });

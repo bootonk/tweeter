@@ -1,9 +1,11 @@
+/* Tweet Submission Form */
+/* Global Sstyling */
 .new-tweet {
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 form {
@@ -14,11 +16,11 @@ form {
 
 form textarea {
   font-weight: bold;
-  resize: none;
+  background-color: #f4f1ec;
   border: none;
   padding-bottom: 20px;
   border-bottom: 3px solid #545149;
-  background-color: #f4f1ec;
+  resize: none;
 }
 
 form textarea:focus {
@@ -26,23 +28,23 @@ form textarea:focus {
 }
 
 form div {
+  font-family: 'Bungee', sans-serif;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
-  font-family: 'Bungee', sans-serif;
 }
 
 form button {
-  background-color: #bc8e0e;
   color: #f4f1ec;
+  background-color: #bc8e0e;
   border-width: 0px;
 }
 
 .error {
-  display: flex;
-  align-items: center;
   border-bottom: 3px dotted #822a2a;
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .error p {
@@ -52,4 +54,12 @@ form button {
 
 .error i, .over-limit {
   color: #822a2a;
+}
+
+/* Desktop Styling */
+@media screen and (min-width: 1024px) {
+  .new-tweet {
+    padding-top: 10px;
+    margin-top: 0px;
+  }
 }

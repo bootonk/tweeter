@@ -1,10 +1,12 @@
+/* Collection of Posted Tweet Elements */
+/* Global Styling */
 article.tweet {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-bottom: 20px;
   border: solid 3px #545149;
   padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 article.tweet:hover {
@@ -42,9 +44,9 @@ article.tweet p {
 
 article.tweet footer {
   display: flex;
+  border-top: 3px solid #545149;
   justify-content: space-between;
   align-items: center;
-  border-top: 3px solid #545149;
 }
 
 article.tweet footer p, article.tweet footer i {
@@ -55,4 +57,11 @@ article.tweet footer p, article.tweet footer i {
 
 article.tweet footer i:hover {
   color: #bc8e0e;
+}
+
+/* Desktop Styling */
+@media screen and (min-width: 1024px) {
+  article.tweet {
+    margin-top: 0px;
+  }
 }
