@@ -7,7 +7,14 @@ For a thoughtful experience, look out for the toggleable tweet form and ability 
 To get into the specifics, we've got HTML, CSS, JS, jQuery and AJAX on the front-end and a Node Express server on the back-end working very well together.
 
 ## A Sneak Peek
+### Leveraging more space with a desktop layout
+!["Leveraging more space with a desktop layout"](https://github.com/bootonk/tweeter/blob/master/docs/desktop-layout.png?raw=true)
 
+### Navigation toggling for access to the form builder
+!["Navigation toggling for access to the form builder"](https://github.com/bootonk/tweeter/blob/master/docs/expand-form.png?raw=true)
+
+### Always one click away from the top when your next post comes to mind
+!["Always one click away from the top when your next post comes to mind"](https://github.com/bootonk/tweeter/blob/master/docs/navigate-to-top-button.png?raw=true)
 
 ## Getting Started
 
